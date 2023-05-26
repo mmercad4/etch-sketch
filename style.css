@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 50%;
+  max-height: 50%;
+  margin-top: 30%;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.colored {
+  background-color: red;
+}
