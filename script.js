@@ -1,4 +1,6 @@
 const container = document.querySelector(".container");
+const generateButton = document.querySelector("#generateButton");
+
 let gridSize = 16;
 
 const createGrid = function (size) {
@@ -15,16 +17,27 @@ const createGrid = function (size) {
   }
 };
 
-createGrid(50);
-
-const divs = container.querySelectorAll("div");
-
 const colorIn = function () {
   this.classList.add("colored");
 };
 
+createGrid(16);
+
+const divs = container.querySelectorAll("div");
 divs.forEach((div) => {
   div.addEventListener("mouseover", colorIn);
 });
 
-console.log(divs);
+generateButton.addEventListener("click", function () {
+  const gridSizeInput = document.querySelector("#gridSizeInput");
+  gridSize = parseInt(gridSizeInput.value);
+
+  if (gridSize > 100) return;
+
+  createGrid(gridSize);
+
+  const divs = container.querySelectorAll("div");
+  divs.forEach((div) => {
+    div.addEventListener("mouseover", colorIn);
+  });
+});

@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .container {
@@ -20,4 +21,32 @@ body {
 
 .colored {
   background-color: red;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.userInput {
+  font-size: 32px;
+  font-weight: bolder;
+  color: skyblue;
+}
+
+input {
+  display: flex;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+button {
+  display: flex;
+  margin-top: 10px;
 }
