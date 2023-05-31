@@ -1,11 +1,21 @@
 const container = document.querySelector(".container");
+let gridSize = 16;
 
-for (let i = 0; i < 256; i++) {
-  const div = document.createElement("div");
-  div.classList.add("box");
+const createGrid = function (size) {
+  container.innerHTML = "";
+  gridSize = size;
 
-  container.append(div);
-}
+  for (let i = 0; i < size * size; i++) {
+    const div = document.createElement("div");
+    div.classList.add("box");
+    container.append(div);
+
+    div.style.height = `${960 / size - 2}px`;
+    div.style.width = `${960 / size - 2}px`;
+  }
+};
+
+createGrid(50);
 
 const divs = container.querySelectorAll("div");
 
