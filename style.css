@@ -20,7 +20,7 @@ body {
 }
 
 .colored {
-  background-color: red;
+  background-color: rgb(1, 1, 1);
 }
 
 .question-container {
